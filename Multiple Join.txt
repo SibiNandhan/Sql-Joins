@@ -1,0 +1,7 @@
+USE sql_store;
+SELECT order_id,order_date,customers.first_name,last_name,name as status FROM sql_store.orders
+join order_statuses
+on orders.status=order_statuses.order_status_id
+join customers
+on orders.customer_id=customers.customer_id
+order by order_id

@@ -1,0 +1,2 @@
+SELECT order_id,orders.customer_id,customers.customer_id,first_name FROM orders
+join customers on orders.customer_id=customers.customer_id
